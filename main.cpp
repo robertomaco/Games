@@ -1,8 +1,14 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <iostream>
+#include "chess.hpp"
+
+using namespace std;
 
 int main(){
 
-printf("Hello, World\n");
+games game;
+
+game.initializeBoard();
+game.printBoard();
+
 
 }
