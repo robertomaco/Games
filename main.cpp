@@ -8,7 +8,6 @@ int main(){
 games game;
 
 game.initializeBoard();
-game.printBoard();
-
+cout << game.board.piece.bishop << endl;
 
 }
