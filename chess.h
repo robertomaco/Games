@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct boardDef{
+typedef struct board{
 
     int board[8][8];
     
 
 } board;
 
-typedef struct pieceDef{
+typedef struct piece{
 
     int colour;
     int rank;
