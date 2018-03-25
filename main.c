@@ -5,7 +5,15 @@
 
 int main(){
 
-generateDeck();
-printDeck();
+deck* d = (deck*) malloc(sizeof(deck));
+hand* pHand = (hand*) malloc(sizeof(deck));
+hand* dHand = (hand*) malloc(sizeof(deck));
+
+generateDeck(d);
+printDeck(d);
+
+resetHand(pHand);
+dealHand(pHand, d);
+printHand(pHand);
 
 }
