@@ -85,7 +85,7 @@ printf("\n");
 //HAWN STUFF----------------------------------------------------------
 
 
-void resetHand(hand* h){
+hand resetHand(hand* h){
 
     for(int i = 0; i<2;i++){
         strcpy(h->hawn[i].suite, " ");
@@ -96,7 +96,7 @@ void resetHand(hand* h){
    // return h;
 }
 
-void printHand(hand* h){
+hand printHand(hand* h){
 for(int i = 0; i<=1; i++){
     printf("%d of %s\n", h->hawn[i].rank, h->hawn[i].suite);
 }
@@ -105,7 +105,6 @@ for(int i = 0; i<=1; i++){
 }
 
 void dealHand(hand* h, deck* d){
-
 
 for(int i = 1; i <=2 ; i++){
     srand(time(NULL) * i);
