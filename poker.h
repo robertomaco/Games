@@ -97,7 +97,7 @@ void resetHand(hand* h){
 }
 
 void printHand(hand* h){
-for(int i = 0; i<2; i++){
+for(int i = 0; i<=1; i++){
     printf("%d of %s\n", h->hawn[i].rank, h->hawn[i].suite);
 }
 
@@ -106,14 +106,15 @@ for(int i = 0; i<2; i++){
 
 void dealHand(hand* h, deck* d){
 
-for(int i = 0; i < 2; i++){
+
+for(int i = 1; i <=2 ; i++){
     srand(time(NULL) * i);
     int randomNumber;
     randomNumber = rand() % 52;
     //printf("%d, %d of %s\n", randomNumber, d->deckofCards[2].rank, d->deckofCards[2].suite);
 
-    h->hawn[i].rank = d->deckofCards[1].rank;
-    strcpy(h->hawn[i].suite, d->deckofCards[1].suite);
+    h->hawn[i-1].rank = d->deckofCards[randomNumber].rank;
+    strcpy(h->hawn[i-1].suite, d->deckofCards[randomNumber].suite);
 }
     //return h;
     
