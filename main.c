@@ -9,12 +9,13 @@ deck* d = (deck*) malloc(sizeof(deck));
 hand* pHand = (hand*) malloc(sizeof(deck));
 hand* dHand = (hand*) malloc(sizeof(deck));
 
-generateDeck(d);
+/* generateDeck(d);
 printDeck(d);
 
 resetHand(pHand);
 dealHand(pHand, d);
-printHand(pHand);
+printHand(pHand); */
+game(dHand, pHand, d);
 
 return 0;
 
