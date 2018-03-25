@@ -36,7 +36,6 @@ void generateDeck(deck* d){
         
         strcpy(d->deckofCards[i].suite, "Clubs");
         d->deckofCards[i].rank = i+1;
-        //printf("%d of %s", d.deckofCards[i].rank, d.deckofCards[i].suite);
 
     }
 
@@ -46,7 +45,6 @@ void generateDeck(deck* d){
             
         strcpy(d->deckofCards[i].suite, "Hearts");
         d->deckofCards[i].rank = i-13+1;
-        //printf("%d of %s", d.deckofCards[i].rank, d.deckofCards[i].suite);
 
     }
 
@@ -55,7 +53,6 @@ void generateDeck(deck* d){
         
         strcpy(d->deckofCards[i].suite, "Diamonds");
         d->deckofCards[i].rank = i-26+1;
-        //printf("%d of %s", d.deckofCards[i].rank, d.deckofCards[i].suite);
 
     }
 
@@ -64,7 +61,6 @@ void generateDeck(deck* d){
         
         strcpy(d->deckofCards[i].suite, "Spades");
         d->deckofCards[i].rank = i-39+1;
-        //printf("%d of %s", d.deckofCards[i].rank, d.deckofCards[i].suite);
 
     }
     
@@ -90,10 +86,8 @@ hand resetHand(hand* h){
     for(int i = 0; i<2;i++){
         strcpy(h->hawn[i].suite, " ");
         h->hawn[i].rank = 0;
-        //printf("%d of %s\n", h.hawn[i].rank, h.hawn[i].suite);
     }
 
-   // return h;
 }
 
 hand printHand(hand* h){
@@ -101,7 +95,6 @@ for(int i = 0; i<=1; i++){
     printf("%d of %s\n", h->hawn[i].rank, h->hawn[i].suite);
 }
 
-//return h;
 }
 
 void dealHand(hand* h, deck* d){
@@ -110,12 +103,11 @@ for(int i = 1; i <=2 ; i++){
     srand(time(NULL) * i);
     int randomNumber;
     randomNumber = rand() % 52;
-    //printf("%d, %d of %s\n", randomNumber, d->deckofCards[2].rank, d->deckofCards[2].suite);
 
     h->hawn[i-1].rank = d->deckofCards[randomNumber].rank;
     strcpy(h->hawn[i-1].suite, d->deckofCards[randomNumber].suite);
 }
-    //return h;
+    
     
 }
 

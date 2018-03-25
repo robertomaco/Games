@@ -16,4 +16,6 @@ resetHand(pHand);
 dealHand(pHand, d);
 printHand(pHand);
 
+return 0;
+
 }
