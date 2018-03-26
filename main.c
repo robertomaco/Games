@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "chess.h"
-#include "poker.h"
+#include "blackjack.h"
 
 int main(){
 
@@ -16,6 +16,10 @@ resetHand(pHand);
 dealHand(pHand, d);
 printHand(pHand); */
 game(dHand, pHand, d);
+
+free(pHand);
+free(dHand);
+free(d);
 
 return 0;
 
