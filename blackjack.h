@@ -15,7 +15,7 @@ typedef struct card{
 //this is the deck struct
 typedef struct deck{
 
-    card deckofCards[52];
+    card deckofCards[51];
 
 }deck;
 
@@ -107,15 +107,16 @@ for(int i = 1; i <=2 ; i++){
     int randomNumber;
     randomNumber = rand() % 52;
 
-//if(d->deckofCards[randomNumber].dealt == 0){
+if(d->deckofCards[randomNumber].dealt == 0){
 
     d->deckofCards[randomNumber].dealt = 1;
     h->hawn[i-1].rank = d->deckofCards[randomNumber].rank;
     strcpy(h->hawn[i-1].suite, d->deckofCards[randomNumber].suite);
 
     }
+    else i--;
 
-   // } 
+   } 
     
 }
 
@@ -132,6 +133,8 @@ void compareHands(hand* p, hand* d){
         printf("Draw");
     }
     else printf("Fuck knows mate.");
+
+    printf("\n");
 }
 
 void game(hand* de, hand* p, deck* d){
