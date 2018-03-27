@@ -6,8 +6,8 @@
 int main(){
 
 deck* d = (deck*) malloc(sizeof(deck));
-hand* pHand = (hand*) malloc(sizeof(deck));
-hand* dHand = (hand*) malloc(sizeof(deck));
+hand* pHand = (hand*) calloc(2, sizeof(hand));
+hand* dHand = (hand*) calloc(4, sizeof(hand));
 
 /* generateDeck(d);
 printDeck(d);
@@ -17,9 +17,9 @@ dealHand(pHand, d);
 printHand(pHand); */
 game(dHand, pHand, d);
 
-free(pHand);
+/* free(pHand);
 free(dHand);
-free(d);
+free(d); */
 
 return 0;
 

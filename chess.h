@@ -15,30 +15,28 @@ typedef struct piece{
 
 }piece; 
 
-void initBoard(){
-
-    board mainBoard;
+void initBoard(board* mainBoard){
 
     for(int i = 0; i < 8; i++){
         for(int j = 0; j < 8; j++){
-            mainBoard.board[i][j] = 0;
+            mainBoard->board[i][j] = 0;
         }
     }
 
     //for(int i = 0; i < 8; i++){
         for(int j = 0; j < 8; j++){
-            mainBoard.board[1][j] = 02;
+            mainBoard->board[1][j] = 02;
         }
     //}
 
 }
 
-void printBoard(){
-    board mainBoard;
+void printBoard(board* mainBoard){
+    
     
     for(int i = 0; i < 8; i++){
         for(int j = 0; j < 8; j++){
-            printf("%d ", mainBoard.board[i][j]);
+            printf("%d ", mainBoard->board[i][j]);
         }
         printf("\n");
     }
