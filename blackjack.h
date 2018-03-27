@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <time.h>
 
 
 //This is the card struct
@@ -104,11 +103,11 @@ for(int i = 0; i<=1; i++){
 void dealHand(hand* h, deck* d){
 
 for(int i = 1; i <=2 ; i++){
-    srand(time(NULL) * i);
+
     int randomNumber;
     randomNumber = rand() % 52;
 
-if(d->deckofCards[randomNumber].dealt == 0){
+//if(d->deckofCards[randomNumber].dealt == 0){
 
     d->deckofCards[randomNumber].dealt = 1;
     h->hawn[i-1].rank = d->deckofCards[randomNumber].rank;
@@ -116,7 +115,8 @@ if(d->deckofCards[randomNumber].dealt == 0){
 
     }
 
-    } 
+   // } 
+    
 }
 
 void compareHands(hand* p, hand* d){
@@ -137,7 +137,6 @@ void compareHands(hand* p, hand* d){
 void game(hand* de, hand* p, deck* d){
 generateDeck(d);
 dealHand(p, d);
-resetHand(de);
 dealHand(de, d);
 
 printf("Your hand: ");
