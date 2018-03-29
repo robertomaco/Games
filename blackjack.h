@@ -23,6 +23,7 @@ typedef struct deck{
 typedef struct hand{
 
     card hawn[1];
+    card hit[5];
 
 }hand;
 
