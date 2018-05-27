@@ -18,14 +18,25 @@ for(int i = 0; i<3; i++){
 }
 
 void printtBoard(tboard* b){
-    printf("Board\n");
-for(int i = 0; i<=2; i++){
+
+for (int *ip = &b->board[0][0]; ip <= &b->board[2][2]; ip++)
+printf("%d", *ip);
+printf("\nBoard\n");
+for(int i = 0; i<3; i++){
     printf("\n");
-    for(int j = 0; j<=2; j++){
+    for(int j = 0; j<3; j++){
        printf("%d ", b->board[i][j]); 
     }
     
-}
+} 
+printf("\n");
+for(int i = 0; i<3; i++){
+    printf("\n");
+    for(int j = 0; j<3; j++){
+       printf("[%d][%d] is %d ", i+1,j+1 ,b->board[i][j]); 
+    }
+    
+} 
 }
 
 void gameAI(tboard *b){
@@ -47,7 +58,7 @@ scanf("%d", &y);
 }while(x < 1 || x > 3 || y < 1 || y > 3);
 
 b->board[x-1][y-1] = 1;
-printf("%d", b->board[1][3]);
+printf("%d\n", b->board[0][2]);
 printtBoard(b);
 }
 
